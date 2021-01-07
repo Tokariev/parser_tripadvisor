@@ -13,3 +13,15 @@ For some cities will be many proposal found.
 If proposal matched with city name, city URL will be saved.  
 Also will be checked if the city is german city.   
 ![](/images/search_aachen.png)  
+
+
+### 3. Read restaurants content by city URL
+...and remove ads restaurants from list(optional)  
+![](/images/premium.png) 
+
+### 4. Get last number on the page  
+![](/images/pagination.png) 
+
+
+### 5. Go through paginaton list
+![](/images/pagination_next.png) 
