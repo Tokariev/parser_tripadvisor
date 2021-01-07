@@ -1,0 +1,35 @@
+[
+	{
+		"query": "query TypeaheadQuery($request: Typeahead_RequestInput!) {\n  Typeahead_autocomplete(request: $request) {\n    resultsId\n    partial\n    results {\n      __typename\n      ...TypeAhead_LocationItemFields\n      ...TypeAhead_UserProfileFields\n      ...TypeAhead_QuerySuggestionFields\n      ...TypeAhead_RescueResultFields\n      ...TypeAhead_ListResultFields\n    }\n  }\n}\n\nfragment TypeAhead_LocationItemFields on Typeahead_LocationItem {\n  documentId\n  locationId\n  details {\n    ...TypeAheadLocationInformationFields\n  }\n}\n\nfragment TypeAhead_UserProfileFields on Typeahead_UserProfileItem {\n  documentId\n  userId\n  details {\n    ...TypeAheadUserProfileFields\n  }\n}\n\nfragment TypeAheadLocationInformationFields on LocationInformation {\n  localizedName\n  localizedAdditionalNames {\n    longOnlyHierarchy\n  }\n  streetAddress {\n    street1\n  }\n  locationV2 {\n    placeType\n    names {\n      longOnlyHierarchyTypeaheadV2\n    }\n    vacationRentalsRoute {\n      url\n    }\n  }\n  url\n  HOTELS_URL: hotelsUrl\n  ATTRACTIONS_URL: attractionOverviewURL\n  RESTAURANTS_URL: restaurantOverviewURL\n  placeType\n  latitude\n  longitude\n  isGeo\n  thumbnail {\n    photoSizes {\n      width\n      height\n      url\n    }\n  }\n}\n\nfragment TypeAheadUserProfileFields on MemberProfile {\n  username\n  displayName\n  followerCount\n  isVerified\n  isFollowing\n  avatar {\n    photoSizes {\n      width\n      height\n      url\n    }\n  }\n  route {\n    url\n  }\n}\n\nfragment TypeAhead_QuerySuggestionFields on Typeahead_QuerySuggestionItem {\n  documentId\n  text\n  route {\n    url\n  }\n  buCategory\n  parentGeoDetails {\n    names {\n      longOnlyHierarchyTypeaheadV2\n    }\n  }\n}\n\nfragment TypeAhead_RescueResultFields on Typeahead_RescueResultItem {\n  documentId\n  text\n}\n\nfragment TypeAhead_ListResultFields on Typeahead_ListResultItem {\n  documentId\n  locationId\n  listResultType\n  FORUMListURL {\n    url\n  }\n  details {\n    localizedName\n    localizedAdditionalNames {\n      longOnlyHierarchy\n    }\n    locationV2 {\n      placeType\n      names {\n        longOnlyHierarchyTypeaheadV2\n      }\n      vacationRentalsRoute {\n        url\n      }\n    }\n    HOTELListURL: hotelsUrl\n    RESTAURANTListURL: restaurantOverviewURL\n    ATTRACTIONListURL: attractionOverviewURL\n    thumbnail {\n      photoSizes {\n        width\n        height\n        url\n      }\n    }\n  }\n}\n",
+		"variables": {
+			"request": {
+				"articleCategories": [
+					"default",
+					"love_your_local",
+					"insurance_lander"
+				],
+				"context": {
+					"routeUid": "X-V27gokLI8AAB@oHxAAAAF5",
+					"searchSessionId": "BCA6226F7D177BC0CF2472ADA71093061609922328547ssid",
+					"typeaheadId": "1609922339059",
+					"uiOrigin": "QuickLink_RESTAURANTS_geopicker"
+				},
+				"limit": 10,
+				"locale": "de-DE",
+				"locationTypes": [
+					"GEO",
+					"NEIGHBORHOOD"
+				],
+				"query": "Aachen",
+				"scope": "WORLDWIDE",
+				"scopeGeoId": 1,
+				"searchCenter": null,
+				"types": [
+					"LOCATION",
+					"RESCUE_RESULT"
+				],
+				"userId": null
+			}
+		}
+	}
+]
